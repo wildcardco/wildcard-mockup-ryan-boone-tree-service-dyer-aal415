@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boone Tree Service Dyer — Tree Removal, Trimming & Storm Cleanup | Dyer, IN</title>
+<meta name="description" content="Boone Tree Service Dyer: local crew for tree removal, trimming, stump grinding, land clearing, and emergency storm cleanup in Dyer and Northwest Indiana. Free estimates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Barlow:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#16241a;
+  --forest-2:#1e2f22;
+  --bark:#4a3323;
+  --bark-2:#5c4029;
+  --sawdust:#e8d9bd;
+  --sawdust-dim:#c9b998;
+  --orange:#f5761a;
+  --orange-hot:#ff8a2e;
+  --ink:#12100c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--forest);
+  color:var(--sawdust);
+  font-family:'Barlow',sans-serif;
+  font-size:1.05rem;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+/* grain texture over everything, subtle */
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  pointer-events:none;z-index:50;
+  opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+h1,h2,h3,.stencil{
+  font-family:'Big Shoulders',sans-serif;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  line-height:.95;
+}
+a{color:var(--orange-hot)}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1160px,92%);margin-inline:auto}
+
+/* skip link */
+.skip{position:absolute;left:-999px;top:0;background:var(--orange);color:var(--ink);padding:.6rem 1rem;font-weight:600;z-index:100}
+.skip:focus{left:0}
+
+/* ============ TOP BAR ============ */
+.topbar{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;
+  padding:.9rem 4%;
+  border-bottom:1px solid rgba(232,217,189,.15);
+  background:var(--forest);
+  position:relative;z-index:10;
+}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--sawdust)}
+.brand svg{width:38px;height:38px;flex:none}
+.brand-name{font-family:'Big Shoulders';font-weight:800;font-size:1.35rem;text-transform:uppercase;letter-spacing:.04em;line-height:1}
+.brand-name small{display:block;font-size:.62rem;letter-spacing:.32em;color:var(--orange);font-weight:700}
+.topnav{display:flex;gap:1.4rem;font-family:'Big Shoulders';font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.95rem}
+.topnav a{color:var(--sawdust-dim);text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent}
+.topnav a:hover,.topnav a:focus{color:var(--orange-hot);border-bottom-color:var(--orange-hot)}
+@media(max-width:640px){.topnav{display:none}}
+
+/* ============ HAZARD STRIPE ============ */
+.hazard{
+  height:14px;
+  background:repeating-linear-gradient(-45deg,var(--orange) 0 16px,var(--ink) 16px 32px);
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  min-height:92vh;
+  display:flex;align-items:flex-end;
+  background:
+    radial-gradient(ellipse 120% 90% at 70% 10%, rgba(92,64,41,.55), transparent 60%),
+    linear-gradient(180deg,#1a2b1e 0%, var(--forest) 70%);
+  overflow:hidden;
+  padding:5rem 0 4.5rem;
+}
+/* giant tree-ring stump graphic, like standing over a fresh cut */
+.rings{
+  position:absolute;
+  right:-18%;top:-12%;
+  width:min(78vw,760px);height:min(78vw,760px);
+  opacity:.9;
+  animation:ringdrift 40s linear infinite alternate;
+}
+@keyframes ringdrift{from{transform:rotate(0deg)}to{transform:rotate(8deg)}}
+@media(prefers-reduced-motion:reduce){.rings{animation:none}}
+.hero .wrap{position:relative;z-index:2}
+.hero-kicker{
+  font-family:'Big Shoulders';font-weight:700;letter-spacing:.35em;text-transform:uppercase;
+  color:var(--orange);font-size:.85rem;margin-bottom:1rem;
+  display:flex;align-items:center;gap:.8rem;
+}
+.hero-kicker::before{content:"";width:42px;height:3px;background:var(--orange)}
+.hero h1{
+  font-size:clamp(3.2rem,10.5vw,7.8rem);
+  color:var(--sawdust);
+  max-width:12ch;
+}
+.hero h1 .cut{color:var(--orange-hot)}
+.hero-sub{
+  max-width:44ch;
+  margin-top:1.4rem;
+  color:var(--sawdust-dim);
+  font-size:1.1rem;
+}
+/* CTA styled as a stapled work tag, deliberately off-center / rotated */
+.tag-cta{
+  display:inline-block;
+  margin-top:2.6rem;
+  margin-left:clamp(0px,14vw,220px); /* off-center, like it was slapped on */
+  transform:rotate(-2.5deg);
+  background:var(--sawdust);
+  color:var(--ink);
+  text-decoration:none;
+  padding:1.1rem 1.6rem 1.1rem 2.4rem;
+  font-family:'Big Shoulders';font-weight:800;font-size:1.4rem;text-transform:uppercase;letter-spacing:.08em;
+  position:relative;
+  box-shadow:6px 8px 0 rgba(0,0,0,.45);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.tag-cta:hover,.tag-cta:focus{transform:rotate(-1deg) translateY(-3px);box-shadow:8px 12px 0 rgba(0,0,0,.5)}
+.tag-cta::before{ /* punched hole */
+  content:"";position:absolute;left:.75rem;top:50%;transform:translateY(-50%);
+  width:12px;height:12px;border-radius:50%;
+  background:var(--forest);
+  box-shadow:inset 0 0 0 2px rgba(0,0,0,.4);
+}
+.tag-cta .staple{ /* staple marks */
+  position:absolute;top:-7px;right:1.2rem;width:26px;height:10px;
+  border:3px solid #8a8a8a;border-bottom:none;
+}
+.tag-cta small{display:block;font-family:'Barlow';font-weight:600;font-size:.72rem;letter-spacing:.14em;color:var(--bark)}
+
+/* ============ SECTION BASICS ============ */
+section{padding:5.5rem 0}
+.sec-label{
+  font-family:'Big Shoulders';font-weight:700;letter-spacing:.35em;text-transform:uppercase;
+  font-size:.8rem;color:var(--orange);margin-bottom:.8rem;
+}
+h2{font-size:clamp(2.3rem,6vw,4.2rem);margin-bottom:2.2rem;color:var(--sawdust)}
+
+/* reveal on scroll (CSS only, progressive) */
+.reveal{opacity:1}
+@supports (animation-timeline: view()){
+  @media(prefers-reduced-motion:no-preference){
+    .reveal{
+      animation:rise both;
+      animation-timeline:view();
+      animation-range:entry 0% entry 42%;
+    }
+    @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+  }
+}
+
+/* ============ JOB SHEET / SERVICES ============ */
+.jobsheet{background:var(--forest-2)}
+.jobsheet h2{max-width:16ch}
+.job-list{list-style:none;border-top:2px solid var(--bark-2)}
+.job-list li{border-bottom:2px solid var(--bark-2)}
+.job-row{
+  display:grid;
+  grid-template-columns:3.2rem 1fr;
+  gap:1rem;align-items:baseline;
+  padding:1.5rem .4rem;
+  transition:background .15s ease, padding-left .15s ease;
+}
+.job-row:hover{background:rgba(245,118,26,.07);padding-left:1rem}
+.job-num{
+  font-family:'Big Shoulders';font-weight:800;font-size:1.1rem;color:var(--orange);
+  letter-spacing:.08em;
+}
+.job-name{font-family:'Big Shoulders';font-weight:800;font-size:clamp(1.5rem,3.4vw,2.2rem);text-transform:uppercase;color:var(--sawdust)}
+.job-desc{color:var(--sawdust-dim);max-width:58ch;margin-top:.35rem;font-size:.98rem}
+@media(min-width:760px){
+  .job-row{grid-template-columns:3.2rem minmax(220px,300px) 1fr}
+  .job-desc{margin-top:0}
+}
+
+/* ============ EMERGENCY STRIP ============ */
+.emergency{
+  background:var(--orange);
+  color:var(--ink);
+  padding:3rem 0;
+  position:relative;
+}
+.emergency::before,.emergency::after{
+  content:"";display:block;position:absolute;left:0;right:0;height:12px;
+  background:repeating-linear-gradient(-45deg,var(--ink) 0 14px,transparent 14px 28px);
+  opacity:.85;
+}
+.emergency::before{top:0}
+.emergency::after{bottom:0}
+.emergency .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem 3rem;justify-content:space-between}
+.emergency h2{color:var(--ink);margin:0;font-size:clamp(2rem,5vw,3.4rem)}
+.emergency p{max-width:46ch;font-weight:600}
+.btn-dark{
+  display:inline-block;background:var(--ink);color:var(--sawdust);text-decoration:none;
+  font-family:'Big Shoulders';font-weight:800;text-transform:uppercase;letter-spacing:.1em;
+  padding:1rem 1.8rem;font-size:1.15rem;
+  transition:transform .15s ease;
+}
+.btn-dark:hover,.btn-dark:focus{transform:translateY(-3px)}
+
+/* ============ CREW / ABOUT ============ */
+.crew .grid{display:grid;gap:3rem}
+@media(min-width:880px){.crew .grid{grid-template-columns:1.1fr .9fr;align-items:start}}
+.crew p{color:var(--sawdust-dim);margin-bottom:1.1rem;max-width:56ch}
+.crew strong{color:var(--sawdust)}
+.plank{
+  background:linear-gradient(180deg,var(--bark-2),var(--bark));
+  border-left:6px solid var(--orange);
+  padding:2rem 1.8rem;
+  box-shadow:8px 10px 0 rgba(0,0,0,.35);
+}
+.plank h3{font-size:1.4rem;color:var(--sawdust);margin-bottom:1rem;letter-spacing:.08em}
+.plank ul{list-style:none}
+.plank li{
+  padding:.7rem 0 .7rem 1.8rem;position:relative;
+  border-bottom:1px dashed rgba(232,217,189,.25);
+  font-weight:600;
+}
+.plank li:last-child{border-bottom:none}
+.plank li::before{
+  content:"";position:absolute;left:0;top:1.05rem;
+  width:.9rem;height:.9rem;
+  background:var(--orange);
+  clip-path:polygon(0 40%,60% 40%,60% 0,100% 50%,60% 100%,60% 60%,0 60%);
+}
+
+/* ============ SERVICE AREA ============ */
+.area{background:var(--forest-2)}
+.towns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem;list-style:none}
+.towns li{
+  font-family:'Big Shoulders';font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+  border:2px solid var(--bark-2);color:var(--sawdust-dim);
+  padding:.5rem 1rem;font-size:1rem;
+}
+.towns li.home{border-color:var(--orange);color:var(--orange-hot)}
+.area p{max-width:58ch;color:var(--sawdust-dim)}
+
+/* ============ ESTIMATE / CONTACT ============ */
+.estimate .grid{display:grid;gap:3rem}
+@media(min-width:880px){.estimate .grid{grid-template-columns:.9fr 1.1fr}}
+.contact-block p{color:var(--sawdust-dim);margin-bottom:1.2rem;max-width:44ch}
+address{font-style:normal;font-weight:600;color:var(--sawdust);line-height:1.7;border-left:4px solid var(--orange);padding-left:1rem;margin:1.4rem 0}
+form{display:grid;gap:1.1rem;background:var(--forest-2);padding:2rem 1.6rem;border:2px solid var(--bark-2)}
+label{font-family:'Big Shoulders';font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.85rem;color:var(--sawdust);display:grid;gap:.4rem}
+input,select,textarea{
+  font-family:'Barlow';font-size:1rem;color:var(--sawdust);
+  background:var(--forest);border:1px solid var(--bark-2);
+  padding:.8rem .9rem;width:100%;
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--orange);outline-offset:1px}
+.btn-orange{
+  background:var(--orange);color:var(--ink);border:none;cursor:pointer;
+  font-family:'Big Shoulders';font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:1.25rem;
+  padding:1rem 1.5rem;
+  box-shadow:5px 6px 0 rgba(0,0,0,.4);
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.btn-orange:hover,.btn-orange:focus{transform:translateY(-3px);box-shadow:7px 9px 0 rgba(0,0,0,.45);background:var(--orange-hot)}
+.form-note{font-size:.85rem;color:var(--sawdust-dim);font-style:italic}
+
+/* ============ FOOTER ============ */
+footer{
+  border-top:1px solid rgba(232,217,189,.15);
+  padding:2.6rem 0 2rem;
+  font-size:.9rem;color:var(--sawdust-dim);
+}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 3rem;justify-content:space-between;align-items:center}
+.credit{opacity:.7}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Boone Tree Service Dyer — home">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#e8d9bd" stroke-width="2"/><circle cx="20" cy="20" r="12" fill="none" stroke="#f5761a" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="none" stroke="#e8d9bd" stroke-width="2"/><circle cx="20" cy="20" r="1.8" fill="#f5761a"/></svg>
+    <span class="brand-name">Boone Tree Service<small>Dyer · Indiana</small></span>
+  </a>
+  <nav class="topnav" aria-label="Main">
+    <a href="#work">The Work</a>
+    <a href="#crew">The Crew</a>
+    <a href="#area">Service Area</a>
+    <a href="#estimate">Free Estimate</a>
+  </nav>
+</header>
+<div class="hazard" aria-hidden="true"></div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <svg class="rings" viewBox="0 0 600 600" aria-hidden="true">
+    <g fill="none" stroke="#5c4029" stroke-width="3" opacity=".9">
+      <circle cx="300" cy="300" r="290" stroke="#4a3323" stroke-width="14"/>
+      <ellipse cx="300" cy="300" rx="262" ry="255" transform="rotate(3 300 300)"/>
+      <ellipse cx="302" cy="298" rx="230" ry="224" transform="rotate(-4 300 300)"/>
+      <ellipse cx="298" cy="302" rx="198" ry="192" transform="rotate(6 300 300)" stroke="#c9b998" opacity=".35"/>
+      <ellipse cx="304" cy="300" rx="168" ry="160" transform="rotate(-2 300 300)"/>
+      <ellipse cx="300" cy="304" rx="138" ry="132" transform="rotate(5 300 300)"/>
+      <ellipse cx="297" cy="299" rx="108" ry="103" transform="rotate(-6 300 300)" stroke="#c9b998" opacity=".35"/>
+      <ellipse cx="302" cy="301" rx="80" ry="75" transform="rotate(3 300 300)"/>
+      <ellipse cx="300" cy="300" rx="54" ry="50" transform="rotate(-3 300 300)"/>
+      <ellipse cx="299" cy="301" rx="30" ry="27"/>
+      <circle cx="300" cy="300" r="9" fill="#f5761a" stroke="none"/>
+      <path d="M300 10 L300 590" stroke="#16241a" stroke-width="5" opacity=".5" transform="rotate(28 300 300)"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <p class="hero-kicker">Dyer, Indiana · Tree Removal &amp; Storm Cleanup</p>
+    <h1>Trees down. Hauled off. <span class="cut">Done right.</span></h1>
+    <p class="hero-sub">A local Dyer crew that shows up with chainsaws, a chipper, and a plan — for the big, the hazardous, and the storm-torn. No corporate overhead. No runaround.</p>
+    <a class="tag-cta" href="#estimate"><span class="staple" aria-hidden="true"></span>Get a Free Estimate<small>Removal · Trimming · Storm &amp; Emergency Work</small></a>
+  </div>
+</section>
+
+<!-- SERVICES / JOB SHEET -->
+<section class="jobsheet" id="work">
+  <div class="wrap reveal">
+    <p class="sec-label">The Job Sheet</p>
+    <h2>What we cut, clear, and haul</h2>
+    <ul class="job-list">
+      <li><div class="job-row">
+        <span class="job-num">01</span>
+        <span class="job-name">Tree Removal</span>
+        <p class="job-desc">Full takedowns from the crown to the trunk — including large and hazardous trees leaning over houses, garages, and power drops. Rigged, dropped, and hauled clean.</p>
+      </div></li>
+      <li><div class="job-row">
+        <span class="job-num">02</span>
+        <span class="job-name">Trimming &amp; Pruning</span>
+        <p class="job-desc">Deadwood out, canopy thinned, limbs off the roofline. Practical cuts that keep trees healthy and keep branches off your property.</p>
+      </div></li>
+      <li><div class="job-row">
+        <span class="job-num">03</span>
+        <span class="job-name">Stump Grinding</span>
+        <p class="job-desc">That stump you've been mowing around for years — ground below grade so you can seed it, sod it, or plant over it.</p>
+      </div></li>
+      <li><div class="job-row">
+        <span class="job-num">04</span>
+        <span class="job-name">Storm Damage Cleanup</span>
+        <p class="job-desc">When Lake County wind and ice bring limbs down, we cut, clear, and stack the mess so your yard doesn't look like the storm just left.</p>
+      </div></li>
+      <li><div class="job-row">
+        <span class="job-num">05</span>
+        <span class="job-name">Land &amp; Lot Clearing</span>
+        <p class="job-desc">Overgrown lots, fence lines, and build sites cleared of trees, brush, and scrub — leaving workable ground behind.</p>
+      </div></li>
+      <li><div class="job-row">
+        <span class="job-num">06</span>
+        <span class="job-name">Emergency Tree Service</span>
+        <p class="job-desc">Tree on the house, limb blocking the drive, split trunk hanging over the yard — urgent situations get moved to the front of the line.</p>
+      </div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- EMERGENCY STRIP -->
+<section class="emergency" aria-label="Emergency tree service">
+  <div class="wrap">
+    <div>
+      <h2>Tree on the house?</h2>
+      <p>Hazardous and storm-damage jobs come first. Reach out and tell us what's down — we'll get eyes on it fast.</p>
+    </div>
+    <a class="btn-dark" href="#estimate">Request Urgent Service →</a>
+  </div>
+</section>
+
+<!-- CREW / ABOUT -->
+<section class="crew" id="crew">
+  <div class="wrap reveal">
+    <p class="sec-label">Who's Showing Up</p>
+    <h2>A local crew, not a call center</h2>
+    <div class="grid">
+      <div>
+        <p><strong>Boone Tree Service Dyer</strong> is a hands-on tree operation working out of Dyer, Indiana. We're the people on the saws — not a franchise dispatching subcontractors from three states away.</p>
+        <p>Working in Northwest Indiana means we know what the weather here does to trees: straight-line winds off the lake plain, heavy wet spring snows, summer storms that split old silver maples down the middle. We've seen how it fails, and we know how to take it down before it takes something with it.</p>
+        <p>Our approach is simple: look at the job, tell you straight what it needs and what it costs, then show up and do it. <strong>No corporate overhead, no upsell script</strong> — just the work.</p>
+      </div>
+      <div class="plank">
+        <h3>How we operate</h3>
+        <ul>
+          <li>Free, no-pressure estimates — you get a straight answer</li>
+          <li>Big-tree and hazardous removals are our specialty</li>
+          <li>Storm and wind damage moved to the front of the line</li>
+          <li>Residential properties treated like our own yards</li>
+          <li>Debris chipped and hauled — we leave it cleaner than we found it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area">
+  <div class="wrap reveal">
+    <p class="sec-label">Where We Work</p>
+    <h2>Dyer &amp; Northwest Indiana</h2>
+    <p>Based at 951 Old Farm Rd in Dyer, we run jobs across Lake County and the surrounding Northwest Indiana communities. If you're near the list below, you're in our territory — and if you're just outside it, ask anyway.</p>
+    <ul class="towns">
+      <li class="home">Dyer</li>
+      <li>Schererville</li>
+      <li>St. John</li>
+      <li>Munster</li>
+      <li>Highland</li>
+      <li>Griffith</li>
+      <li>Crown Point</li>
+      <li>Cedar Lake</li>
+      <li>Lake County</li>
+      <li>Greater NW Indiana</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ESTIMATE -->
+<section class="estimate" id="estimate">
+  <div class="wrap reveal">
+    <p class="sec-label">Next Step</p>
+    <h2>Request a free estimate</h2>
+    <div class="grid">
+      <div class="contact-block">
+        <p>Tell us what you've got — a leaner over the garage, a stump in the way, a lot that needs clearing, or a mess the last storm left behind. We'll take a look and give you a straight price.</p>
+        <address>
+          Boone Tree Service Dyer<br>
+          951 Old Farm Rd<br>
+          Dyer, IN 46311
+        </address>
+        <p>For storm damage or a tree threatening your home, mark your request <strong>urgent</strong> and it goes to the top of the pile.</p>
+      </div>
+      <form action="#" method="post" aria-label="Estimate request form">
+        <label>Name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>Phone or Email
+          <input type="text" name="contact" autocomplete="tel" required>
+        </label>
+        <label>Property Location (town)
+          <input type="text" name="town" placeholder="Dyer, Schererville, St. John…">
+        </label>
+        <label>Type of Job
+          <select name="job">
+            <option>Tree removal</option>
+            <option>Trimming / pruning</option>
+            <option>Stump grinding</option>
+            <option>Storm damage cleanup</option>
+            <option>Land / lot clearing</option>
+            <option>Emergency — urgent</option>
+          </select>
+        </label>
+        <label>What's going on with the tree?
+          <textarea name="details" rows="4" placeholder="Size, location on property, anything it's leaning toward…"></textarea>
+        </label>
+        <button class="btn-orange" type="submit">Send Estimate Request</button>
+        <p class="form-note">Estimates are free. No obligation, no sales pitch.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="hazard" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <p>© 2026 Boone Tree Service Dyer · 951 Old Farm Rd, Dyer, IN 46311</p>
+    <p class="credit">Website sample by Wild Card Creative Co</p>
+  </div>
+</footer>
+
+</body>
+</html>
